@@ -1,0 +1,135 @@
+#:import Toolbar kivymd.toolbar.Toolbar
+#:import ThemeManager kivymd.theming.ThemeManager
+#:import MDNavigationDrawer kivymd.navigationdrawer.MDNavigationDrawer
+#:import NavigationLayout kivymd.navigationdrawer.NavigationLayout
+#:import NavigationDrawerDivider kivymd.navigationdrawer.NavigationDrawerDivider
+#:import NavigationDrawerToolbar kivymd.navigationdrawer.NavigationDrawerToolbar
+#:import NavigationDrawerSubheader kivymd.navigationdrawer.NavigationDrawerSubheader
+#:import MDCheckbox kivymd.selectioncontrols.MDCheckbox
+#:import MDSwitch kivymd.selectioncontrols.MDSwitch
+#:import MDList kivymd.list.MDList
+#:import OneLineListItem kivymd.list.OneLineListItem
+#:import TwoLineListItem kivymd.list.TwoLineListItem
+#:import ThreeLineListItem kivymd.list.ThreeLineListItem
+#:import OneLineAvatarListItem kivymd.list.OneLineAvatarListItem
+#:import OneLineIconListItem kivymd.list.OneLineIconListItem
+#:import OneLineAvatarIconListItem kivymd.list.OneLineAvatarIconListItem
+#:import MDTextField kivymd.textfields.MDTextField
+#:import MDSpinner kivymd.spinner.MDSpinner
+#:import MDCard kivymd.card.MDCard
+#:import MDSeparator kivymd.card.MDSeparator
+#:import MDDropdownMenu kivymd.menu.MDDropdownMenu
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+#:import colors kivymd.color_definitions.colors
+#:import SmartTile kivymd.grid.SmartTile
+#:import MDSlider kivymd.slider.MDSlider
+#:import MDTabbedPanel kivymd.tabs.MDTabbedPanel
+#:import MDTab kivymd.tabs.MDTab
+#:import MDProgressBar kivymd.progressbar.MDProgressBar
+#:import MDAccordion kivymd.accordion.MDAccordion
+#:import MDAccordionItem kivymd.accordion.MDAccordionItem
+#:import MDAccordionSubItem kivymd.accordion.MDAccordionSubItem
+#:import MDThemePicker kivymd.theme_picker.MDThemePicker
+#:import MDBottomNavigation kivymd.tabs.MDBottomNavigation
+#:import MDBottomNavigationItem kivymd.tabs.MDBottomNavigationItem
+<Principal>:
+    NavigationLayout:
+        id: nav_layout
+        MDNavigationDrawer:
+            id: nav_drawer
+            NavigationDrawerToolbar:
+                title: "Navigation Drawer"
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Accordion"
+                on_release: app.root.ids.scr_mngr.current = 'accordion'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Bottom Navigation"
+                on_release: app.root.ids.scr_mngr.current = 'bottom_navigation'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Bottom Sheets"
+                on_release: app.root.ids.scr_mngr.current = 'bottomsheet'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Buttons"
+                on_release: app.root.ids.scr_mngr.current = 'button'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Cards"
+                on_release: app.root.ids.scr_mngr.current = 'card'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Dialogs"
+                on_release: app.root.ids.scr_mngr.current = 'dialog'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Grid lists"
+                on_release: app.root.ids.scr_mngr.current = 'grid'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Labels"
+                on_release: app.root.ids.scr_mngr.current = 'labels'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Lists"
+                on_release: app.root.ids.scr_mngr.current = 'list'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Menus"
+                on_release: app.root.ids.scr_mngr.current = 'menu'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Navigation Drawer Widgets"
+                on_release: app.root.ids.scr_mngr.current = 'nav_drawer'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Pickers"
+                on_release: app.root.ids.scr_mngr.current = 'pickers'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Progress & activity"
+                on_release: app.root.ids.scr_mngr.current = 'progress'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Progress bars"
+                on_release: app.root.ids.scr_mngr.current = 'progressbars'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Selection controls"
+                on_release: app.root.ids.scr_mngr.current = 'selectioncontrols'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Sliders"
+                on_release: app.root.ids.scr_mngr.current = 'slider'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Snackbars"
+                on_release: app.root.ids.scr_mngr.current = 'snackbar'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Tabs"
+                on_release: app.root.ids.scr_mngr.current = 'tabs'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Text fields"
+                on_release: app.root.ids.scr_mngr.current = 'textfields'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Themes"
+                on_release: app.root.ids.scr_mngr.current = 'theming'
+            NavigationDrawerIconButton:
+                icon: 'checkbox-blank-circle'
+                text: "Toolbars"
+                on_release: app.root.ids.scr_mngr.current = 'toolbar'
+        BoxLayout:
+            orientation: 'vertical'
+            Toolbar:
+                id: toolbar
+                title: 'KivyMD Kitchen Sink'
+                md_bg_color: app.theme_cls.primary_color
+                background_palette: 'Primary'
+                background_hue: '500'
+                left_action_items: [['menu', lambda x: app.root.toggle_nav_drawer()]]
+                right_action_items: [['dots-vertical', lambda x: app.root.toggle_nav_drawer()]]

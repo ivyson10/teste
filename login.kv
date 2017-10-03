@@ -1,0 +1,40 @@
+#:import MDTextField kivymd.textfields.MDTextField 
+#:import ThemeManager kivymd.theming.ThemeManager 
+#:import MDBottomNavigation kivymd.tabs.MDBottomNavigation 
+<Login>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: [10, -180, 10, 50]
+        spacing: 20
+
+        canvas.before:
+            Color:
+                rgba: 1, 1, 1, 1
+            Rectangle:
+                # self here refers to the widget i.e BoxLayout
+                pos: self.pos
+                size: self.size
+
+        Image:
+            size_hint: 1., 4.
+            source: 'images/logo.gif'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10, -20, 10, 30
+        spacing: 40
+        MDTextField:
+            hint_text: 'Login'
+            multiline: False
+            
+        MDTextField:
+            hint_text: 'Senha'
+            multiline: False
+            password: True
+        MDRaisedButton:
+            text: 'Entrar'
+            size_hint: None, None
+            pos_hint: {'center_x': 0.5, 'center_y': 0.6}
+            on_press: root.manager.current = 'principal'
+        
+        
+    
