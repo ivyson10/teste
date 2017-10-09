@@ -20,3 +20,7 @@ class MeuApp(App):
  
 if   __name__  == '__main__': 
     MeuApp().run() 
+
+
+
+#Se fode aí mah IVISON -----------------------------------------
