@@ -24,3 +24,4 @@ if   __name__  == '__main__':
 
 
 #Se fode aí mah IVISON -----------------------------------------
+#opa mah, deu erro oh
